@@ -71,7 +71,7 @@ function Page() {
     }
   }
   return (
-    <section style={{ display: 'grid', gap: 'var(--s-4)', justifyItems: 'start', padding: 'var(--s-6) 0' }}>
+    <section style={{ display: 'grid', gap: 'var(--s-4)', justifyItems: 'start' }}>
       {name !== null && <h1 style={{ font: 'var(--t-large-title)', margin: 0 }}>{t('hello', { name })}</h1>}
       <ui.Button icon="send" loading={sending} onClick={() => void ping()}>
         {t('ping')}
