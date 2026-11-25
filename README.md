@@ -8,7 +8,7 @@ Made from `addons/template`. It shows every part of addon contract 1
 - a button that asks the addon to publish `ping` through the core API
   (`POST /api/addon-core/v1/events`); the page shows the event
   `addon.hello.ping` when it comes back;
-- a tile in «Управление» that opens the page;
+- a tile in «Настройки → Сервер» that opens the page;
 - an item action «Привет от расширения» whose text, with the item's title,
   shows in a notice on the item page;
 - playing external inputs (permission `play`, access `adults`): with

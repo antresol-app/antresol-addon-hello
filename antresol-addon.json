@@ -2,7 +2,7 @@
   "id": "hello",
   "name": { "ru": "Привет", "en": "Hello" },
   "description": { "ru": "Пример расширения: здоровается, присылает событие и отвечает на странице фильма", "en": "A sample addon: greets you, sends an event and answers on a film page" },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Antresol",
   "homepage": "",
   "contract": 1,

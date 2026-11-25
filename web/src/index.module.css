@@ -1,0 +1,10 @@
+/* the page's own layout; the look is the app's tokens */
+.page {
+  display: grid;
+  gap: var(--s-4);
+  justify-items: start;
+}
+.title {
+  margin: 0;
+  font: var(--t-large-title);
+}

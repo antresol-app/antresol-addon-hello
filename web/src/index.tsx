@@ -5,6 +5,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { addonApi, registerAddon, ui, useAddonT, useEvents } from '@antresol/addon-sdk'
+import styles from './index.module.css'
 
 const ID = 'hello'
 const api = addonApi(ID)
@@ -71,8 +72,8 @@ function Page() {
     }
   }
   return (
-    <section style={{ display: 'grid', gap: 'var(--s-4)', justifyItems: 'start' }}>
-      {name !== null && <h1 style={{ font: 'var(--t-large-title)', margin: 0 }}>{t('hello', { name })}</h1>}
+    <section className={styles.page}>
+      {name !== null && <h1 className={styles.title}>{t('hello', { name })}</h1>}
       <ui.Button icon="send" loading={sending} onClick={() => void ping()}>
         {t('ping')}
       </ui.Button>
@@ -90,7 +91,7 @@ function Page() {
 
 registerAddon(ID, {
   routes: [{ path: 'page', title: s.title, element: Page }],
-  manageTiles: [{ label: s.title, icon: 'puzzle', to: 'page' }],
+  manageTiles: [{ label: s.title, icon: 'puzzle', tint: 'gray', to: 'page' }],
   // the text run() returns shows in a notice under the item's actions
   itemActions: [{ label: s.action, icon: 'sparkles', run: (item) => s.actionSaid.replace('{title}', item.title) }],
   // shown while one of this addon's inputs loads in the core player
